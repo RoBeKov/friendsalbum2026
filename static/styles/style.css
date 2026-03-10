@@ -1,0 +1,56 @@
+body{
+    margin:0;
+    font-family: Arial,sans-serif;
+    background:#f4f4f4;
+}
+
+/* navbar */
+
+.navbar{
+    background:#333;
+    padding:15px;
+}
+
+.nav-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+/* content */
+
+.content{
+    text-align:center;
+    margin-top:60px;
+}
+
+.title{
+    font-size:36px;
+}
+
+/* image */
+
+.image-box img{
+    width:500px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.error-page{
+    background-image: url("../images/friendli_album_cover.svg");
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    padding:60px;
+}

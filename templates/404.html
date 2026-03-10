@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}404{% endblock %}
+
+{% block content %}
+
+<div class="error-page">
+
+    <h1>Не откривам такава страница!</h1>
+    <h2>Page not found!</h2>
+
+    <br>
+
+    <a href="{% url 'home_page' %}">
+        <button>Return to Home</button>
+    </a>
+
+</div>
+
+{% endblock %}
