@@ -15,7 +15,10 @@
         <ul class="nav-links">
             <li><a href="{% url 'home_page' %}">Home</a></li>
             <li><a href="{% url 'visitors_profile' %}">Visitors</a></li>
+            <!-- <li><a href="{% url 'add_photo' %}">Add Photo</a></li> -->
+            {% if request.path != '/visitors/' %}
             <li><a href="{% url 'add_photo' %}">Add Photo</a></li>
+            {% endif %}
             <li><a href="{% url 'login_profile' %}">Log In</a></li>
             <li><a href="{% url 'register_profile' %}">Register</a></li>
         </ul>

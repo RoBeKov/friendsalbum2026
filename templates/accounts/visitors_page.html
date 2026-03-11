@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Visitors Page{% endblock %}
+
+{% block content %}
+
+<div class="photo-container">
+
+    <div class="photo-info-top">
+        <span class="author">{{ photo.author }}</span>
+        <span class="date">{{ photo.date_of_publication }}</span>
+        <span class="location">{{ photo.location }}</span>
+    </div>
+
+    <div class="image-box">
+        {% if photo.photo %}
+            <img src="{{ photo.photo.url }}" alt="photo">
+        {% else %}
+            <p>No photo available</p>
+        {% endif %}
+    </div>
+
+    <div class="photo-description">
+        <p>{{ photo.description }}</p>
+    </div>
+
+</div>
+
+{% endblock %}
