@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{% for photo in photos %}
+
 <div class="photo-container">
 
     <div class="photo-info-top">
@@ -25,5 +27,11 @@
     </div>
 
 </div>
+
+{% empty %}
+
+<p>No photos uploaded yet.</p>
+
+{% endfor %}
 
 {% endblock %}

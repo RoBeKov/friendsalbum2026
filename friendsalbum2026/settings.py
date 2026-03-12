@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-9kw4_18orsda2qt(7s7v_$4+vya0-qzay!8ok*sx$$1+7cn_$x'
+
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-temporary-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,7 +84,7 @@ DATABASES = {
         "NAME": "friendsalbum",
         "USER": "postgres",
         "PASSWORD": os.getenv("DB_PASSWORD", "1234"),
-        #"PASSWORD": "MyF1RSTDB",
+
         "HOST": "127.0.0.1",
         "PORT": "5434",
     }

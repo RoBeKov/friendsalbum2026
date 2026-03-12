@@ -21,10 +21,10 @@ def details_profile(request, pk):
 
 def visitors_profile(request):
     #return None
-    photo = Photo.objects.last()
+    photos = Photo.objects.all()
 
     context = {
-        'photo': photo
+        'photos': photos
     }
 
     return render(request, 'accounts/visitors_page.html', context)

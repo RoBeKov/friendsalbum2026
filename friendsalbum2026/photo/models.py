@@ -7,6 +7,7 @@ from friendsalbum2026.photo.validators import validate_size
 # Create your models here.
 class Photo(models.Model):
     photo = models.ImageField(
+        upload_to='',
         validators=[
             validate_size
         ]
