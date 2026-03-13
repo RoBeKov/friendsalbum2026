@@ -16,9 +16,13 @@
             <li><a href="{% url 'home_page' %}">Home</a></li>
             <li><a href="{% url 'visitors_profile' %}">Visitors</a></li>
 
-            {% if request.path != '/visitors/' %}
+            {% if request.resolver_match.url_name != 'visitors_profile' %}
             <li><a href="{% url 'add_photo' %}">Add Photo</a></li>
             {% endif %}
+
+            {% block extra_nav %}
+            {% endblock %}
+
             <li><a href="{% url 'login_profile' %}">Log In</a></li>
             <li><a href="{% url 'register_profile' %}">Register</a></li>
         </ul>

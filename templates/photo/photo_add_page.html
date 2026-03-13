@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Add Photo{% endblock %}
+
+{% block extra_nav %}
+<li><a href="{% url 'edit_photo' %}">Photo Edit</a></li>
+<li><a href="{% url 'details_photo' %}">Photo Details</a></li>
+{% endblock %}
+
+{% block content %}
+
+<h2>Add Photo</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>
+        <label>Photo:</label>
+        {{ form.photo }}
+    </p>
+
+    <p>
+        <label>Description:</label>
+        {{ form.description }}
+    </p>
+
+    <p>
+        <label>Location:</label>
+        {{ form.location }}
+    </p>
+
+    <p>
+        <label>Author:</label>
+        {{ form.author }}
+    </p>
+
+    <button type="submit">Add Photo</button>
+
+</form>
+
+{% endblock %}

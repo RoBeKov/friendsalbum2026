@@ -4,9 +4,11 @@ from friendsalbum2026.photo import views
 
 urlpatterns = [
     path('add/', views.add_photo, name='add_photo'),
-    path('<int:pk>/', include([
-        path('', views.details_photo, name='details_photo'),
-        path('edit/', views.edit_photo, name='edit_photo'),
+    #path('<int:pk>/', include([
+        #path('', views.details_photo, name='details_photo'),
+        #path('edit/', views.edit_photo, name='edit_photo'),
 
-    ])),
+    #])),
+    path('', views.details_photo, name='details_photo'),
+    path('edit/', views.edit_photo, name='edit_photo'),
 ]
